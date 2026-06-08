@@ -1,0 +1,45 @@
+from flask import Flask, request, jsonify
+import numpy as np
+import json
+from PIL import Image
+import tensorflow as tf
+
+app = Flask(__name__)
+
+model = tf.keras.models.load_model("saf_model.keras")
+
+with open("class_names.json") as f:
+    class_names = json.load(f)
+
+with open("plant_health_data.json") as f:
+    plant_info = json.load(f)
+
+def preprocess(img):
+    img = img.resize((224, 224))
+    img = np.array(img) / 255.0
+    return np.expand_dims(img, axis=0)
+
+@app.route("/predict", methods=["POST"])
+def predict():
+    file = request.files["file"]
+
+    img = Image.open(file).convert("RGB")
+    img = preprocess(img)
+
+    prediction = model.predict(img)
+    idx = np.argmax(prediction)
+
+    class_name = class_names[idx]
+    confidence = float(prediction[0][idx] * 100)
+
+    info = plant_info.get(class_name, {})
+
+    return jsonify({
+        "class": class_name,
+        "confidence": round(confidence, 2),
+        "issue": info.get("issue", ""),
+        "treatment": info.get("treatment", "")
+    })
+
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=5000)

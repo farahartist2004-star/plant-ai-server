@@ -1,0 +1,22 @@
+{
+    "Damaged": {
+        "issue": "The plant shows visible damage that may be caused by pests, physical injury, or environmental stress.",
+        "treatment": "Inspect the plant carefully, remove damaged parts if necessary, and ensure proper irrigation and nutrient supply."
+    },
+    "Powdery_Mildew": {
+        "issue": "Powdery mildew is a fungal disease that appears as white powdery spots on leaves and stems.",
+        "treatment": "Apply appropriate fungicides, improve air circulation, and avoid excessive humidity around the plant."
+    },
+    "brown blight": {
+        "issue": "Brown blight causes brown lesions and drying of plant tissues, reducing plant health and growth.",
+        "treatment": "Remove infected leaves, avoid overhead watering, and apply suitable fungicides if necessary."
+    },
+    "healthy": {
+        "issue": "The plant is healthy with no visible disease symptoms.",
+        "treatment": "Continue regular irrigation, fertilization, and routine monitoring."
+    },
+    "rust": {
+        "issue": "Rust is a fungal disease characterized by orange or brown pustules on leaves.",
+        "treatment": "Remove infected leaves and apply recommended fungicides while maintaining good field hygiene."
+    }
+}
