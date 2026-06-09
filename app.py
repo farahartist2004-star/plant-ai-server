@@ -18,7 +18,10 @@ def preprocess(img):
     img = img.resize((224, 224))
     img = np.array(img) / 255.0
     return np.expand_dims(img, axis=0)
-
+@app.route("/")
+def home():
+    return "AI Server Running"
+    
 @app.route("/predict", methods=["POST"])
 def predict():
     file = request.files["file"]
