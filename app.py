@@ -24,6 +24,9 @@ def home():
     
 @app.route("/predict", methods=["POST"])
 def predict():
+    print("Request received at /predict")
+    if "file" not in request.files:
+        return jsonify({"error": "No file uploaded"}), 400
     file = request.files["file"]
 
     img = Image.open(file).convert("RGB")
