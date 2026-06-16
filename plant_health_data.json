@@ -1,22 +1,18 @@
 {
+    "Healthy": {
+        "issue": "The mint leaves are healthy with no visible signs of plant disease or pest damage.",
+        "treatment": "Continue regular monitoring, maintain appropriate irrigation schedules, and ensure adequate exposure to sunlight."
+    },
     "Damaged": {
-        "issue": "The plant shows visible damage that may be caused by pests, physical injury, or environmental stress.",
-        "treatment": "Inspect the plant carefully, remove damaged parts if necessary, and ensure proper irrigation and nutrient supply."
+        "issue": "Visible signs of physical damage, leaf tearing, or environmental stress detected on the mint leaves.",
+        "treatment": "Prune heavily damaged leaves, check for localized issues, and stabilize watering and nutrient supply."
     },
-    "Powdery_Mildew": {
-        "issue": "Powdery mildew is a fungal disease that appears as white powdery spots on leaves and stems.",
-        "treatment": "Apply appropriate fungicides, improve air circulation, and avoid excessive humidity around the plant."
+    "Rust": {
+        "issue": "Mint Rust fungal disease detected. Characterized by orange-brown, dusty pustules on the undersides of the leaves.",
+        "treatment": "Immediately isolate the plant, remove and safely dispose of infected leaves, and apply a suitable organic or chemical fungicide."
     },
-    "brown blight": {
-        "issue": "Brown blight causes brown lesions and drying of plant tissues, reducing plant health and growth.",
-        "treatment": "Remove infected leaves, avoid overhead watering, and apply suitable fungicides if necessary."
-    },
-    "healthy": {
-        "issue": "The plant is healthy with no visible disease symptoms.",
-        "treatment": "Continue regular irrigation, fertilization, and routine monitoring."
-    },
-    "rust": {
-        "issue": "Rust is a fungal disease characterized by orange or brown pustules on leaves.",
-        "treatment": "Remove infected leaves and apply recommended fungicides while maintaining good field hygiene."
+    "Spots": {
+        "issue": "Leaf Spots or pest-induced spotting observed. Often caused by insect bites or fungal/bacterial spot pathogens.",
+        "treatment": "Inspect carefully for insects (like aphids or spider mites), use neem oil or insecticidal soap, and avoid overhead watering to prevent spore spread."
     }
 }
